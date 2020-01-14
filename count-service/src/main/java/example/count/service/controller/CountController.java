@@ -25,6 +25,7 @@ public class CountController {
                 .delayElements(Duration.ofSeconds(1))
                 .log();
 
+        // Start counting immediately
         this.count.subscribe(sink::next);
     }
 

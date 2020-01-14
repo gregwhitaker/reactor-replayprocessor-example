@@ -40,7 +40,7 @@ public class CountController {
      * Returns a stream of integers.
      *
      * @param history if <code>true</code> then return all historical values before returning new values; otherwise
-     *                return a new stream of values
+     *                return newly published values only
      * @return a stream of integers
      */
     @GetMapping(value = "/nums",

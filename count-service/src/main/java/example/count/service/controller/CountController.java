@@ -2,6 +2,7 @@ package example.count.service.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,12 +30,13 @@ public class CountController {
         this.count.subscribe(sink::next);
     }
 
-    @GetMapping("/nums")
+    @GetMapping(value = "/nums",
+                produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Integer> getNumbers(@RequestParam(value = "history", defaultValue = "true") boolean history) {
         if (history) {
-            return replayProcessor;
+            return Flux.from(replayProcessor);
         } else {
-            return count;
+            return Flux.from(count);
         }
     }
 }

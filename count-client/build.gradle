@@ -8,4 +8,5 @@ sourceCompatibility = 1.8
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'info.picocli:picocli:4.1.4'
 }

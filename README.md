@@ -25,11 +25,7 @@ Follow the steps below to run the example:
     
 3. Next, navigate to [http://localhost:8080/nums?history=false](http://localhost:8080/nums?history=false).
 
-    Notice that you do not receive the previously generated numbers, but instead a new stream of numbers that have started over at `1`.
-    
-4. Next, navigate back to [http://localhost:8080/nums](http://localhost:8080/nums).
-
-    Notice that the numbers have continued to count up since you last accessed the URL.
+    Notice that the count started wherever it had left off and did not return historical numbers.
 
 ## Bugs and Feedback
 For bugs, questions and discussions please use the [Github Issues](https://github.com/gregwhitaker/reactor-replayprocessor-example/issues).

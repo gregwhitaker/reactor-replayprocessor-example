@@ -1,4 +1,34 @@
 # reactor-replayprocessor-example
+Example of using a ReplayProcessor to store and replay history between subscriptions.
+
+## Building the Example
+Run the following command to build the example:
+
+    ./gradlew clean build
+    
+## Running the Example
+Follow the steps below to run the example:
+
+1. Run the following command to start the service:
+
+        ./gradlew bootRun
+        
+   If successful, you will see the count starting in the terminal:
+   
+       : onNext(1)
+       : onNext(2)
+       : onNext(3)
+       
+2. Open a web browser and navigate to [http://localhost:8080/nums](http://localhost:8080/nums).
+
+    Notice that all previously generated numbers are streamed to you before you receive new numbers.
+    
+3. Next, navigate to [http://localhost:8080/nums?history=false](http://localhost:8080/nums?history=false).
+
+    Notice that you do not receive the previously generated numbers, but instead a new stream of numbers starting at `1`.
+
+## Bugs and Feedback
+For bugs, questions and discussions please use the [Github Issues](https://github.com/gregwhitaker/reactor-replayprocessor-example/issues).
 
 ## License
 MIT License

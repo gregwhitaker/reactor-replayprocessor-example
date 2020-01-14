@@ -1,15 +1,18 @@
 plugins {
-    id "org.springframework.boot"           version "2.2.2.RELEASE"    apply false
-    id "io.spring.dependency-management"    version "1.0.8.RELEASE"    apply false
+    id "idea"
+    id "java"
+    id "org.springframework.boot"           version "2.2.2.RELEASE"
+    id "io.spring.dependency-management"    version "1.0.8.RELEASE"
 }
 
-allprojects {
-    apply plugin: 'idea'
+group = 'com.github.gregwhitaker'
+version = '0.1.0'
+sourceCompatibility = 1.8
 
-    group = 'com.github.gregwhitaker'
-    version = '0.1.0'
+repositories {
+    mavenCentral()
+}
 
-    repositories {
-        mavenCentral()
-    }
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
 }

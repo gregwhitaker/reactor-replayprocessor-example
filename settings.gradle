@@ -1,0 +1,5 @@
+rootProject.name = 'reactor-replayprocessor-example'
+include 'server'
+include 'count-service'
+include 'count-client'
+

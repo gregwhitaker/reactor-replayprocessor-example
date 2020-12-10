@@ -1,4 +1,6 @@
 # reactor-replayprocessor-example
+![Build](https://github.com/gregwhitaker/reactor-replayprocessor-example/workflows/Build/badge.svg)
+
 Example of using a ReplayProcessor to store and replay history between subscriptions.
 
 ## Building the Example
